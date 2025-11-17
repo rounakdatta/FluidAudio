@@ -46,6 +46,11 @@ let package = Package(
                 .process("Utils/english.json")
             ]
         ),
+        .executableTarget(
+            name: "diarize-transcribe",
+            dependencies: ["FluidAudio"],
+            path: "Sources/DiarizeTranscribe"
+        ),
         .testTarget(
             name: "FluidAudioTests",
             dependencies: ["FluidAudio"]
